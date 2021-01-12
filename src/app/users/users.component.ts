@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListarUsuariosService } from '../listarUsuarios/listar-usuarios.service';
 
 @Component({
   selector: 'app-users',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
-  constructor() { }
+  users: any;
+
+  constructor(public listarUsers: ListarUsuariosService) { }
 
   ngOnInit(): void {
+    this.listarUsers.createUser({
+      name: "morpheus",
+      job: "leader"
+    });
+    this.listarUsers.editUser({
+      name: "morpheus",
+      job: "zion resident"
+    });
   }
 
 }
