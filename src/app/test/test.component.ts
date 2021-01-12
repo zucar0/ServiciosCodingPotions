@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MensajesService } from '../servicios/mensajes.service';
 
 @Component({
   selector: 'app-test',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+  constructor(public servicioMensajes: MensajesService) { }
 
   ngOnInit(): void {
+    this.servicioMensajes.add("prueba");
   }
 
 }
