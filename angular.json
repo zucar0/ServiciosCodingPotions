@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "serviciosCodingPotions"
+  "defaultProject": "serviciosCodingPotions",
+  "cli": {
+    "analytics": "dcf54fce-b3a6-4c33-aada-fa6512283f8f"
+  }
 }
